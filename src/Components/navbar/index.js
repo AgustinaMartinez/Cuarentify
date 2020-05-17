@@ -6,7 +6,7 @@ const Navbar = props => {
     return (
         <nav className="navbar1">
             <div className="navbar1__nothing"></div>
-            <img className="navbar1__logo" src="/Assets/icon.png" alt="logo"></img>
+            <img className="navbar1__logo" src="/Assets/icon.png" alt="logo"/>
             <button className="navbar1__container" onClick={props.toggleSearchBar}>
                 <img className="navbar1__container__loupe" src="/Assets/search_icon.svg" alt="loupe logo"/>
                 <img className="navbar1__container__arrow" src={props.arrow} alt="arrow"/>
