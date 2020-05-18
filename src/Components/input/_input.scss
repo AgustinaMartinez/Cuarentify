@@ -1,0 +1,21 @@
+@import '../../Style-patterns/patterns';
+
+.input{
+    display: flex;
+    justify-content: center;
+
+    &__button{
+        position: relative;
+        left: 0.5rem;
+        z-index: 20;
+        background-color: transparent;
+        border: transparent;
+    }
+
+    &__input{
+        @extend %input;
+        // width: 95%;
+        // height: 100%;
+        margin-left: -1.5rem;
+    }
+}

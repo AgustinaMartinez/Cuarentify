@@ -23,6 +23,7 @@ const Layout = props => {
         <React.Fragment>
             <Navbar toggleSearchBar={toggleSearchBar} arrow={arrow}/>
             <SearchBar search={search}/>
+            {props.children}
         </React.Fragment>
     );
 }

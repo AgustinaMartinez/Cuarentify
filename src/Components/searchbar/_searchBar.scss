@@ -18,23 +18,8 @@
         transition: .8s;
     }
 
-    &__input{
-        position: relative;
-        z-index: 10;
-        width: 90%;
-        height: 45%;
-        border: 1px solid #ccc;
-        border-radius: 20px;
-        text-align: center;
-        font-size: 1rem;
-        margin-left: -1.5rem;
-    }
-
-    &__button{
-        position: relative;
-        left: 2rem;
-        z-index: 20;
-        background-color: transparent;
-        border: transparent;
+    Input{
+        width: 20rem;
+        height: 1.8rem;
     }
 }

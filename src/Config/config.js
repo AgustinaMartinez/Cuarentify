@@ -8,12 +8,10 @@ export const config = {
 
 export const artistEndpoint = {
     url: 'https://api.spotify.com/v1/search',
-    type: 'artist',
-
-    
+    type: 'artist'
 }
 
 export const header = {
-    'Authorization': 'Bearer BQAz37CPbEi3w3K7ill5YoM2p-KDN8fAe51qHnIjs8qZc7SawU-RI82XkGsJqpb2OhldSjXiqVQq9i9L_8IddI4fBKTVBZJRr8jVvnWtxoievHg04A8rbra7QVIgVjbCnF5HP0lBAU_AbF0vtXita1lKmIdPRktX00ipT89Nvs2AzrclsOMc5ar7J9aNlMgpLo10z4931H7sp5OqP2f8RY9xlpaTBjWlRCQ6W-2vA4lZ6g6MgQfwdcXU7arN2IBakCNOL9-wvo09mizKcbwEaGHctqr9cEtf',
+    'Authorization': 'Bearer BQAUp-96Sk7g2qscYzOSqXMypxVoespPXqqv5j1m6O66Gz4jM3uknL4vhlkiwu_xQTtYwH9NPxWklOte9g_gFyQ9UvMBJCEUzgLZumz79HulvdkyofXj3tYrLi9JNtlCZ1iLdcDg6-5Q200EgFNe_309aD5X6fXg6tvF-4bEoGzEQ3tn5jt0JrT0_j7LjyXsHpkM4_AuK4Us0Sp1-39sjoCOolUFhq3kNCWK3VJsMB-lIn_H3QTvpIw_9vFDuo__SsxndrmWbf_GwkEnsEhVuET0PNkXYhT2',
     'Content-Type': 'application/json'
 }

@@ -1,4 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
 //Variables
 $green: #1DB954;
 $white: #FFFFFF;
 $black: #191414;
+$mainFont: 'Roboto', sans-serif;
+$secondaryFont: 'Varela Round', sans-serif;
+
+//Patterns
+%input{
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 1rem;
+}

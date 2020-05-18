@@ -1,17 +1,26 @@
 import React from 'react';
+import Input from '../input';
+import './_header.scss';
 
 const Header = props => (
 
-    <header>
-        <div>
-            <h5>{props.title}</h5>
-            <h1>{props.subtitle}</h1>
+    <header className="header">
+        <div className="header__titles">
+            <h3 className="header__titles__title">Welcome to</h3>
+            <h1 className="header__titles__subtitle">Cuarensearch</h1>
         </div>
-        <div>
-            <p>{props.paragraph}</p>
+        <p className="header__paragraph">
+            Search your favorite songs over Cuarentify, just enter an artist's name in the following
+            search box and enjoy!
+        </p>
+        <div className="header__searchBox">
+            <Input
+                name="artist"
+                type="text"
+                placeholder="Type the name of your favorite artist"
+            />
         </div>
-        <div>
-            
-        </div>
->    </header>
-)
+    </header>
+);
+
+export default Header;

@@ -27,10 +27,6 @@
         border: transparent;
         display: flex;
         flex-direction: column;
-
-        &:active{
-            outline-style: none;
-        }
         
         &__loupe{
             filter: invert(97%) sepia(1%) saturate(2889%) hue-rotate(200deg) brightness(117%) contrast(100%);
