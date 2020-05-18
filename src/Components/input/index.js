@@ -16,8 +16,8 @@ const Input = props => {
             const res = await fetch(`${artistEndpoint.url}?q=${value}&type=${artistEndpoint.type}`, {headers: header});
             const data = await res.json();
 
-            if(data.status === 401){
-                alert("Intentá nuevamente.");
+            if(data.error.status === 401){
+                alert("Token expirado. Intentá nuevamente con otro token.");
                 return;
             }
 
