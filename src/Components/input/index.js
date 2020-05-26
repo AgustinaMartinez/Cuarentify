@@ -1,22 +1,31 @@
 import React, {useState} from 'react';
-import {artistEndpoint, header} from '../../Config/config';
+import {artistsListEndpoint, header} from '../../Config/config';
+import {Redirect} from "react-router-dom";
+import useArtist from '../../Context/artists';
+import useInput from '../../Context/input';
 import './_input.scss';
 
 const Input = props => {
 
+    const [redirect, setRedirect] = useState(false);
     const [value, setValue] = useState('');
+    const {setInput} = useInput('');
+    const {setArtists} = useArtist();
 
     const changeValue = e => {
         setValue(e.target.value);
+        setInput(e.target.value);
     }
 
     const getFetchData = async () => {
 
         try{
-            const res = await fetch(`${artistEndpoint.url}?q=${value}&type=${artistEndpoint.type}`, {headers: header});
+            const res = await fetch(`${artistsListEndpoint.url}?q=${value}&type=${artistsListEndpoint.type}`, {headers: header});
             const data = await res.json();
 
-            if(data.error.status === 401){
+            let info = data.artists.items;
+
+            if(data.error === 401){
                 alert("Token expirado. Intentá nuevamente con otro token.");
                 return;
             }
@@ -26,10 +35,11 @@ const Input = props => {
                 return;
             }
 
-            console.log(data);
+            setArtists(info);
+            setRedirect(true);
 
         } catch(error){
-            console.log(error)
+            console.log(error);
             alert("Hubo un error para buscar el artista, intentá nuevamente.");
         }
     }
@@ -47,8 +57,9 @@ const Input = props => {
                 placeholder={props.placeholder}
                 onChange={changeValue}
             />
+            {redirect && <Redirect to="/artists"/>}
         </div>
-    )
+    );
 };
 
 export default Input;

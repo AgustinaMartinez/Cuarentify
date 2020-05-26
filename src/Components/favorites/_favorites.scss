@@ -1,0 +1,23 @@
+@import '../../Style-patterns/patterns';
+
+.favorites{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 90%;
+    border: 1px solid red;
+
+    &__title{
+        font-family: $mainFont;
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+
+        List{
+            align-self: flex-end;
+        }
+    }
+}

@@ -1,17 +1,17 @@
-export const config = {
-    authEndpoint: "https://accounts.spotify.com/authorize",
-    clientId: "353ef28ca8734415b390ea4416744253",
-    redirectUri: "http://localhost:3000/callback",
-    responseType: "token",
-    showDialog: true
+export const header = {
+    'Authorization': 'Bearer BQBhOIW8-wfqzYF_8fBzp2ZxIf85yfUv2MgUXPMi4XL4pWc35tVKN2-FVTPrswNjM6_Hdq_U845Je8UkHN-9DPSRG9j62Nq_dJ2dTJHHtZpH6iiDNSp6WJID-aXy_XNyFYR4-CmKjSFArkbFjd9kEevnkYi12u8lJxy_FosBWM7iNm2LWCIgRXdjEAjCbiCPG4FlL12rekT6FKFG9ELjCSvYo3m_P1sfs7VNLOu-8zOJ2FeNtkZa760pdHQsuTOmQeprz2bRQMDBHx6jVqjx8LeLiYFaLBVS',
+    'Content-Type': 'application/json'
 }
 
-export const artistEndpoint = {
+export const artistsListEndpoint = {
     url: 'https://api.spotify.com/v1/search',
     type: 'artist'
 }
 
-export const header = {
-    'Authorization': 'Bearer BQAUp-96Sk7g2qscYzOSqXMypxVoespPXqqv5j1m6O66Gz4jM3uknL4vhlkiwu_xQTtYwH9NPxWklOte9g_gFyQ9UvMBJCEUzgLZumz79HulvdkyofXj3tYrLi9JNtlCZ1iLdcDg6-5Q200EgFNe_309aD5X6fXg6tvF-4bEoGzEQ3tn5jt0JrT0_j7LjyXsHpkM4_AuK4Us0Sp1-39sjoCOolUFhq3kNCWK3VJsMB-lIn_H3QTvpIw_9vFDuo__SsxndrmWbf_GwkEnsEhVuET0PNkXYhT2',
-    'Content-Type': 'application/json'
+export const artistEndpoint = {
+    url: 'https://api.spotify.com/v1/artists'
+}
+
+export const albumEndpoint = {
+    url: 'https://api.spotify.com/v1/albums'
 }

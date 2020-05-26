@@ -5,9 +5,9 @@ import './_searchBar.scss';
 
 const SearchBar = props => {
 
-    let barClasses = 'navbar2';
+    let barClasses = 'searchNavbar';
     if(props.search){
-        barClasses = 'navbar2 open';
+        barClasses = 'searchNavbar open';
     }
 
     return (
@@ -18,7 +18,7 @@ const SearchBar = props => {
                 placeholder="Search for another artist"
             />
         </div>
-    )
+    );
 }
 
 export default SearchBar;

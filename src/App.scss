@@ -1,6 +1,9 @@
-@import './Components/layout/layout';
-@import './Pages/Home/home';
+@import './Components/layout1/layout1';
+@import './Components/layout2/layout2';
+@import './Style-patterns/patterns';
 
 *{
     margin: 0;
+    background-color: $black;
+    color: $white;
 }

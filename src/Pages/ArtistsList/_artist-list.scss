@@ -1,0 +1,30 @@
+.artistsList{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+@media only screen and (min-width: 700px){
+    .artistsList{
+        &__each{
+            display: grid;
+            grid-template-columns: 45% 45%;
+            grid-template-rows: 20%;
+            gap: 0.5rem 1rem;
+            margin-bottom: 1rem;
+            align-self: center;
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .artistsList{
+        &__each{
+            align-self: center;
+            gap: 0.5rem 1.5rem;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+        }
+    }
+}

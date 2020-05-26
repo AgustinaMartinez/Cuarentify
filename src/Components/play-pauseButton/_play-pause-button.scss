@@ -1,0 +1,17 @@
+.ppButton{
+    border: transparent;
+    background-color: transparent;
+    width: 12%;
+    height: 90%;
+    
+    &__ppIcon{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .ppButton{
+        cursor: pointer;
+    }
+}

@@ -1,15 +1,17 @@
 import React from 'react';
-import Layout from '../../Components/layout';
-import Header from '../../Components/header';
+import Layout1 from '../../Components/layout1';
+import Header from '../../Components/header-home';
+import Footer from '../../Components/footer';
 
 import './_home.scss';
 
-const Home = () => (
+const HomePage = () => (
 
-    <React.Fragment>
-        <Layout/>
+    <div className="homePage">
+        <Layout1/>
         <Header/>
-    </React.Fragment>
+        <Footer/>
+    </div>
 );
 
-export default Home;
+export default HomePage;

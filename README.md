@@ -1,68 +1,42 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## `Introducción`
 
-## Available Scripts
+Como usuario, quiero poder buscar un artista en spotify y ver sus álbumes y canciones. Además, quiero poder marcar mis canciones favoritas. (opcional)
 
-In the project directory, you can run:
+### `Objetivos`
 
-### `npm start`
+1. Crear una aplicación web que pueda ser accedida desde un teléfono y desde una máquina desktop.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2. Obtener los resultados que coincidan con el texto ingresado, usando la API de búsqueda de spotify.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+3. Poder marcar mis canciones favoritas y que al refrescar el navegador, sigan apareciendo como favoritas. (opcional)
 
-### `npm test`
+### `Requisitos Funcionales`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `Necesarios`
 
-### `npm run build`
+1. Como usuario, quiero poder buscar un artista en un formulario y ver el resultado de esa búsqueda.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Como usuario, quiero poder seleccionar entre los artistas que aparecieron en el resultado y luego ver un listado de sus álbumes.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+3. Como usuario, quiero poder clickear en uno de sus álbumes y ver el nombre del álbum, una foto del álbum y el listado de canciones.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Como usuario quiero poder realizar una nueva búsqueda desde cualquier punto de mi aplicación.
 
-### `npm run eject`
+5. Como usuario debo poder regresar a la página principal de mi aplicación en cualquier punto del flow.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+6. Como usuario quiero poder escuchar un fragmento de cada tema.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Ingresá a este link para crear el token: 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+`https://developer.spotify.com/console/get-several-albums/?ids=&market=`
 
-## Learn More
+1. Hacé clic en `GET TOKEN` y tildá todas las opciones.
+2. Hacé clic en `REQUEST TOKEN`.
+3. Al costado, copiá el token generado sin incluir el 'Bearer'.
+4. Pegalo reemplazando el token anterior en la línea 2 en `src` > `config` > `config.js`.
+5. Ya podés hacer consumir de la API de Spotify.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### `Errores:`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Si escribís mal al artista, apretás el botón "search" sin haber escrito nada o si se venció el token, saltará el error `Hubo un error para buscar el artista, intentá nuevamente`.
