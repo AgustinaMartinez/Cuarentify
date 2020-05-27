@@ -1,23 +1,35 @@
 import React, {useState} from 'react';
 import PlayPauseButton from '../play-pauseButton';
+import useFavorite from '../../Context/favorites';
+import useAlbum from '../../Context/album';
 import './_trackList.scss';
 
 const TracksList = props => {
 
     const [starIcon, setStarIcon] = useState("/Assets/star_icon.svg");
     const [isFav, setIsFav] = useState(false);
+    const {favorite, setFavorite} = useFavorite();
+    const {album} = useAlbum();
 
     const toggleFav = () => {
-        if(!isFav) {
+        if(isFav===false) {
             setIsFav((prevState) => {
                 return {star: !prevState.star}
             });
-            setStarIcon("/Assets/star_icon2.svg");       
-        } else {
+            setStarIcon("/Assets/star_icon2.svg");
+            const currentFavorites = JSON.parse(localStorage.getItem('favs')) || []
+            const newFavorites = [...currentFavorites, {'favTrack': props.name, 'favAlbum': album.name, 'favArtist': album.artists[0].name}]
+            localStorage.setItem('favs', JSON.stringify(newFavorites));
+            setFavorite(newFavorites);
+            localStorage.getItem('favs');
+        } else{
             setIsFav(false);
             setStarIcon("/Assets/star_icon.svg");
+            localStorage.removeItem('favs', {'favTrack': props.name, 'favAlbum': album.name, 'favArtist': album.artists[0].name});
         }
     }
+
+    console.log(favorite);
 
     return (
         <div className="tracksList">
