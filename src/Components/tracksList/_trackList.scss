@@ -32,6 +32,8 @@
                     margin: 0.5rem;
                     text-decoration: none;
                     color: $white;
+                    width: auto;
+                    line-height: 0.9rem;
                 }
                 
                 &__comment{
@@ -45,6 +47,12 @@
         &__button{
             border: none;
             height: 2rem;
+            outline:none;
+
+            &:active{
+                outline:none;
+                box-shadow: none;
+            }
             
             &__star{
                 width: 1.2rem;

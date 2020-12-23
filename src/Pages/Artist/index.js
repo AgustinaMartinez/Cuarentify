@@ -6,8 +6,9 @@ import List from '../../Components/list';
 import Footer from '../../Components/footer';
 import useArtist from '../../Context/artists';
 import useAlbums from '../../Context/albums';
-import {artistEndpoint, header} from '../../Config/config';
+import {artistEndpoint} from '../../Config/config';
 import {useParams} from 'react-router-dom';
+import useToken from '../../Context/token';
 import './_artist.scss';
 
 const ArtistPage = () => {
@@ -18,24 +19,28 @@ const ArtistPage = () => {
 
     let widthScreen = window.innerWidth;
 
+    const {token} = useToken();
+    const theHeader = {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json'
+    }
+
     useEffect(() => {
         const getAlbums = async () => {
-            const res = await fetch(`${artistEndpoint.url}/${id}/albums`, {headers: header});
+            const res = await fetch(`${artistEndpoint.url}/${id}/albums`, {headers: theHeader});
             const data = await res.json();
             const info = data.items
             setAlbums(info);
-            console.log(info);
         }
 
         const getArtist = async () => {
-            const res = await fetch(`${artistEndpoint.url}/${id}`, {headers: header});
+            const res = await fetch(`${artistEndpoint.url}/${id}`, {headers: theHeader});
             const data = await res.json();
             setArtists(data);
-            console.log("ARTISTA: ", data);
         }
         getArtist();
         getAlbums();
-    }, [id]);
+    }, []);
 
     const albumsList = albums.map(album => (
         <List 
@@ -48,7 +53,7 @@ const ArtistPage = () => {
     ));
 
     return (
-        <React.Fragment>
+        <div className="albumsList">
             {widthScreen < 1000 ? <Layout2/> : <Layout3/>}
             <Header3
                 name={artists.name}
@@ -58,11 +63,11 @@ const ArtistPage = () => {
                 link2="/artists"
                 link3={`/artist/${artists.id}`}
             />
-            <div className="albumsList">
+            <div className="albumsList__list">
                 {albumsList}
             </div>
             <Footer/>
-        </React.Fragment>
+        </div>
     );
 }
 

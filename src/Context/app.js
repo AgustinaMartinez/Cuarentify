@@ -12,7 +12,9 @@ export const AppProvider = props => {
             tracks: [],
             songs: [],
             input: [],
-            favorites: []
+            favorites: JSON.parse(localStorage.getItem("favs") || "[]"),
+            token: "",
+            isLogged: false
         }
     );
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import LoginPage from './Pages/Login';
 import HomePage from './Pages/Home';
 import ArtistsPage from './Pages/ArtistsList';
 import ArtistPage from './Pages/Artist';
@@ -12,7 +13,8 @@ const App = () => {
   return (
     <AppProvider>
       <Router>
-        <Route exact path="/" component={HomePage}/>
+        <Route exact path="/" component={LoginPage}/>
+        <Route exact path="/home" component={HomePage}/>
         <Route exact path="/artists" component={ArtistsPage}/>
         <Route path="/artist/:id" component={ArtistPage}/>
         <Route path="/album/:id" component={AlbumPage}/>

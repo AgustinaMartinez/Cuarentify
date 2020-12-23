@@ -1,11 +1,12 @@
 @import '../../Style-patterns/patterns';
 
 .list{
-    width: 90%;
+    width: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0.5rem 1rem;
+    text-decoration: none;
 
     &__artist{
         border: 1px $black;
@@ -28,17 +29,12 @@
             color: $white;
             background-color: $black2;
 
-            &__link{
+            &--title{
+                font-family: $secondaryFont;
+                font-size: 0.9rem;
+                margin: 0.5rem;
+                color: $white;
                 background-color: $black2;
-                text-decoration: none;
-
-                &--title{
-                    font-family: $secondaryFont;
-                    font-size: 0.9rem;
-                    margin: 0.5rem;
-                    color: $white;
-                    background-color: $black2;
-                }
             }
 
             &__comment, &__comment2{

@@ -1,0 +1,16 @@
+.loginPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+@media only screen and (min-width: 1000px){
+    .loginPage{
+        justify-content: space-between;
+
+        LoginSection{
+            margin: 5rem;
+        }
+    }
+}

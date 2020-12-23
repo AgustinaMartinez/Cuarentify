@@ -13,8 +13,8 @@ const Header3 = props => {
                 </div>
             </div>
             <div className="header3__links">
-                <Link to="/" className="header3__links--1">Home </Link> >
-                <Link to={props.link2} className="header3__links--2">Artists</Link> >
+                <Link to="/home" className="header3__links--1">Home </Link>
+                <Link to={props.link2} className="header3__links--2">Artists</Link>
                 <Link to={props.link3} className="header3__links--3">{props.linkArtistName}</Link>
             </div>
         </header>

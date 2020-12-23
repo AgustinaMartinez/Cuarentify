@@ -5,11 +5,13 @@ import Header3 from '../../Components/header-artist';
 import TracksContainer from '../../Components/tracksContainer';
 import TracksList from '../../Components/tracksList';
 import Footer from '../../Components/footer';
-import {albumEndpoint, header} from '../../Config/config';
+import {albumEndpoint} from '../../Config/config';
 import useArtist from '../../Context/artists';
 import useTracks from '../../Context/tracks';
 import useAlbum from '../../Context/album';
 import {useParams} from 'react-router-dom';
+import useToken from '../../Context/token';
+
 import './_albums.scss';
 
 const AlbumPage = props => {
@@ -21,12 +23,17 @@ const AlbumPage = props => {
 
     let widthScreen = window.innerWidth;
 
+    const {token} = useToken();
+    const theHeader = {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json'
+    }
+
     useEffect(() => {
         const getDisco = async () => {
-            const res = await fetch(`${albumEndpoint.url}/${id}`, {headers: header});
+            const res = await fetch(`${albumEndpoint.url}/${id}`, {headers: theHeader});
             const data = await res.json();
             setAlbum(data);
-            console.log(data)
             const info = data.tracks.items;
             setTracks(info);
         }

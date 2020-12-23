@@ -1,21 +1,35 @@
 @media only screen and (min-width: 700px){
     .albumsList{
-        display: grid;
-        grid-template-columns: 45% 45%;
-        grid-template-rows: 10%;
-        gap: 0.5rem;
-        margin-bottom: 1rem;
-        align-self: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh;
+
+        &__list{
+            display: grid;
+            grid-template-columns: 45% 45%;
+            grid-template-rows: 10%;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            align-self: center;
+        }
     }
 }
 
 @media only screen and (min-width: 1000px){
     .albumsList{
-        align-items: center;
-        display: grid;
-        grid-template-columns: 47% 47%;
-        grid-template-rows: 10% 10%;
-        gap: 0.5rem 2rem;
-        margin-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh;
+        
+        &__list{
+            align-items: center;
+            display: grid;
+            grid-template-columns: 47% 47%;
+            grid-template-rows: 10% 10%;
+            gap: 0.5rem 2rem;
+            margin-left: 1rem;
+        }
     }
 }

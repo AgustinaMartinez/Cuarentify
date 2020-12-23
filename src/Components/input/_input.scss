@@ -14,6 +14,7 @@
         border: transparent;
         height: 100%;
         width: 2rem;
+        outline: none;
 
         &__icon{
             background-color: transparent;
@@ -26,6 +27,7 @@
         @extend %input;
         margin-left: -1.5rem;
         background-color: $black;
+        outline: none;
     }
 }
 

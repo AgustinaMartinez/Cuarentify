@@ -1,11 +1,12 @@
 .ppButton{
     border: transparent;
     background-color: transparent;
-    width: 12%;
+    width: 4rem;
     height: 90%;
+    outline: none;
     
     &__ppIcon{
-        width: 100%;
+        width: auto;
         height: 100%;
     }
 }

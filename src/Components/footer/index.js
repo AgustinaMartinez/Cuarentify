@@ -6,7 +6,7 @@ const Footer = () => {
 
     return (
         <footer className="footer">
-            <Link to="/" className="footer__link">
+            <Link to="/home" className="footer__link">
                 <button className="footer__link__homeButton">
                     <img className="footer__link__homeButton__icon" src="/Assets/home_icon.svg" alt="home"/>
                 </button>
