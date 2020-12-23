@@ -10,6 +10,7 @@ const Authentication = () => {
             let theToken = window.location.hash.substr(1);
             if (theToken) {
                 const t = Object.fromEntries(new URLSearchParams(theToken));
+                console.log(t)
                 setToken(t.access_token);
             }
             return token;

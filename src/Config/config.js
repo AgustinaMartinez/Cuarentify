@@ -18,8 +18,8 @@ export const albumEndpoint = {
 
 export const loginConfig = {
     authEndpoint: "https://accounts.spotify.com/authorize",
-    clientId: "353ef28ca8734415b390ea4416744253",
-    redirectUri: encodeURIComponent("http://localhost:3000/home"),
+    clientId: `${process.env.REACT_APP_CLIENT_SECRET}`,
+    redirectUri: encodeURIComponent("https://cuarentify.vercel.app/home"),
     responseType: "token",
     showDialog: true
 }
